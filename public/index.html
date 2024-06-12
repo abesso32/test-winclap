@@ -24,7 +24,39 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Test winclap</title>
+
+    <script>
+      !(function (t, e, n, s, a, c, i, o, p) {
+        (t.AppsFlyerSdkObject = a),
+          (t.AF =
+            t.AF ||
+            function () {
+              (t.AF.q = t.AF.q || []).push(
+                [Date.now()].concat(Array.prototype.slice.call(arguments))
+              );
+            }),
+          (t.AF.id = t.AF.id || i),
+          (t.AF.plugins = {}),
+          (o = e.createElement(n)),
+          (p = e.getElementsByTagName(n)[0]),
+          (o.async = 1),
+          (o.src =
+            "https://websdk.appsflyer.com?" +
+            (c.length > 0 ? "st=" + c.split(",").sort().join(",") + "&" : "") +
+            (i.length > 0 ? "af_id=" + i : "")),
+          p.parentNode.insertBefore(o, p);
+      })(window, document, "script", 0, "AF", "banners", {
+        banners: { key: "b0b60e9a-2254-403e-9a0b-a7fe1e065f4d" },
+      });
+      AF("banners", "showBanner", {
+        additionalParams: {
+          deep_link_value: "apples",
+          deep_link_sub1: "22",
+          af_adset: "my_adset",
+        },
+      });
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
