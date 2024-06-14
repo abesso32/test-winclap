@@ -9,12 +9,10 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./Header";
 import MainFeaturedPost from "./MainFeaturedPost";
 import FeaturedPost from "./FeaturedPost";
-import Main from "./Main";
 import Sidebar from "./Sidebar";
-import Footer from "./Footer";
-import post1 from "./blog-post.1.md";
-import post2 from "./blog-post.2.md";
-import post3 from "./blog-post.3.md";
+import MainBlog from "../images/main-blog.jpeg";
+import Blog1 from "../images/blog1.png";
+import Blog2 from "../images/blog2.png";
 
 const sections = [
   { title: "Technology", url: "#" },
@@ -30,42 +28,37 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: "Title of a longer featured blog post",
+  title: "What does growth mean in a content strategy?",
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image:
-    "https://images.pexels.com/photos/25682344/pexels-photo-25682344/free-photo-of-colores.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "To convert more, to measure top of mind, to go viral with massive trends or to impact only our target with a personalized message?",
+  image: MainBlog,
   imageText: "main image description",
-  linkText: "Continue reading…",
+  linkText: "",
 };
 
 const featuredPosts = [
   {
-    title: "Featured post",
-    date: "Nov 12",
+    title: "Marketing Efficiency Workshop",
+    date: "Jul 12",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image:
-      "https://images.pexels.com/photos/25857329/pexels-photo-25857329/free-photo-of-arte-modelo-estampado-cacerola.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "Learn how to increase the efficiency of your campaigns through the valuable tips we will share in our Marketing Efficiency Workshop.",
+    image: Blog1,
     imageLabel: "Image Text",
   },
   {
-    title: "Post title",
-    date: "Nov 11",
+    title: "Growth Transformation Summit",
+    date: "Jul 11",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image:
-      "https://images.pexels.com/photos/19315391/pexels-photo-19315391/free-photo-of-acera-vehiculo-berlina-sedan.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "TLearn how to increase the efficiency of your campaigns through the valuable tips we will share in our Marketing Efficiency Workshop.",
+    image: Blog2,
     imageLabel: "Image Text",
   },
 ];
 
-const posts = [post1, post2, post3];
-
 const sidebar = {
   title: "About",
   description:
-    "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.",
+    "We transform how companies attract, acquire, retain and monetize users. We transform how companies grow.",
   archives: [
     { title: "March 2020", url: "#" },
     { title: "February 2020", url: "#" },
@@ -103,7 +96,6 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
@@ -113,10 +105,6 @@ export default function Blog() {
           </Grid>
         </main>
       </Container>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
     </ThemeProvider>
   );
 }
