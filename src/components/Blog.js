@@ -13,6 +13,7 @@ import Sidebar from "./Sidebar";
 import MainBlog from "../images/main-blog.jpeg";
 import Blog1 from "../images/blog1.png";
 import Blog2 from "../images/blog2.png";
+import { EmailForm } from "./EmailForm";
 
 const sections = [
   { title: "Technology", url: "#" },
@@ -90,6 +91,7 @@ export default function Blog() {
         <Header title="Blog" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
+          <EmailForm />
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
