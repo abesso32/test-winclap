@@ -7,6 +7,7 @@ import {
   Select,
   Snackbar,
   TextField,
+  Typography,
 } from "@mui/material";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -62,8 +63,23 @@ export const EmailForm = () => {
   };
 
   return (
-    <>
-      <Box sx={{ backgroundColor: "white", width: "30%", p: 4, my: 2 }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        width: "100%",
+      }}
+    >
+      <Typography sx={{ color: "white" }}>Test Deeplinking</Typography>
+      <Box
+        sx={{
+          backgroundColor: "white",
+          p: 4,
+          my: 2,
+        }}
+      >
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -116,6 +132,6 @@ export const EmailForm = () => {
         variant="filled"
         message={errorMessage}
       />
-    </>
+    </Box>
   );
 };
